@@ -106,7 +106,7 @@ fn main_impl(args: Args) -> io::Result<()> {
                     },
                     features: entry.get(&Yaml::String("features".into())).and_then(Yaml::as_vec).map(|v| v.into_iter().filter_map(Yaml::as_str).map(Into::into).collect()).unwrap_or(Vec::new()),
                     default_features: entry.get(&Yaml::String("default-features".into())).and_then(Yaml::as_bool).unwrap_or(true),
-                    include_deps: entry.get(&Yaml::String("include-deps".into())).and_then(Yaml::as_bool).unwrap_or(true),
+                    include_deps: entry.get(&Yaml::String("include-deps".into())).and_then(Yaml::as_bool).unwrap_or(false),
                 };
                 let mut out = PathBuf::from(&flag_out);
                 out.push(&request.name);
