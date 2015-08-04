@@ -1,0 +1,24 @@
+language: rust
+rust:
+    - nightly
+    - beta
+    - stable
+os:
+    - linux
+sudo: false
+addons:
+    apt:
+        sources:
+            - kalakris-cmake
+        packages:
+            - cmake
+            - libcurl4-openssl-dev
+            - libelf-dev
+            - libdw-dev
+cache:
+    directories:
+        - target
+
+script:
+    - cargo build -v
+    - cargo test -v

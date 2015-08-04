@@ -1,0 +1,24 @@
+---
+---
+<html>
+	<head>
+		<title>Rust Crate Documentation - youmu</title>
+	</head>
+	<body>
+		<h1>Packages</h1>
+		<p>{{ site.data.crates | size }} packages documented.</p>
+		<ul>
+			{% for crate in site.data.crates %}
+			<li>
+			<b>
+				<a href="{{ crate.package }}/{{ crate.package | replace: '-', '_' }}">{{ crate.package }}</a>
+			</b>
+			{% endfor %}
+		</ul>
+		<h2>Generate Documentation</h2>
+		<p>
+			The <a href="https://github.com/arcnmx/youmu/blob/master/README.md#generating-documentation">youmu README</a>
+			describes how to add or update the crate documentation on this page.
+		</p>
+	</body>
+</html>
