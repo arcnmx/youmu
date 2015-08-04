@@ -9,10 +9,14 @@ http://arcnmx.github.io/youmu-docs/
 ## Generating Documentation
 
 [Edit this file](https://github.com/arcnmx/youmu-docs/edit/master/crates.yml) by forking
-and issuing a pull request. The documentation for the requested crate will be automatically
-generated for you. You may delete your fork as soon as the pull request is made.
+the [youmu-docs](https://github.com/arcnmx/youmu-docs) repo and issuing a pull request.
+The documentation for the requested crate will be automatically generated for you. You may
+delete your fork as soon as the pull request is made.
 
 ### crates.yml
+
+This file lists all the crates to generate documentation for - which can be edited, added,
+or removed at will. See the example below for the more advanced generation options.
 
 ```yaml
 - package: hyper
